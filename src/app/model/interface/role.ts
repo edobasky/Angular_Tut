@@ -6,7 +6,7 @@ export interface IRole {
 
  export interface APIResponseModel {
   message : string,
-  results: boolean,
+  result: boolean,
   data: any
 }
 
