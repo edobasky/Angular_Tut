@@ -34,53 +34,53 @@
               New Client Project
           </div>
           <div class="card-body">
-              <form>
+              <form [formGroup]="projectForm">
                   <div class="row">
                       <div class="col-6">
                           <label for="">Project Name</label>
-                          <input type="text" class="form-control">
+                          <input type="text" formControlName="projectName" formControlName="projectName" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="">Start Date</label>
-                          <input type="date" class="form-control">
+                          <input type="date" formControlName="startDate" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="">Expected End Date</label>
-                          <input type="date" class="form-control">
+                          <input type="date" formControlName="expectedEndDate" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="">Contact Name</label>
-                          <input type="text" class="form-control">
+                          <input type="text" formControlName="contactPerson" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="">Contact Mobile</label>
-                          <input type="text" class="form-control">
+                          <input type="text" formControlName="contactPersonContactNo" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="">Contact Email</label>
-                          <input type="text" class="form-control">
+                          <input type="text" formControlName="contactPersonEmailId" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="">Total Employee Count</label>
-                          <input type="text" class="form-control">
+                          <input type="text" formControlName="totalEmpWorking" class="form-control">
                       </div>
                       <div class="col-6">
                           <label for="project-cost">Project Costing</label>
-                          <Textarea type="text" class="form-control"></Textarea>
+                          <input type="text" formControlName="projectCost" class="form-control">
                       </div>
                       <div class="col-12">
                           <label for="">Project Description</label>
-                          <textarea class="form-control"></textarea>
+                          <textarea formControlName="projectDetails" class="form-control"></textarea>
                       </div>
                       <div class="col-6">
                           <label for="select-client">Select Client</label>
-                          <select id="select-client" class="form-control">
+                          <select id="select-client" formControlName="clientId" class="form-control">
                               <option value="" disabled selected>Select client</option>
                           </select>
                       </div>
                       <div class="col-6">
                           <label for="lead-by">Lead by</label>
-                          <select id="lead-by" class="form-control">
+                          <select id="lead-by" formControlName="leadByEmpId" class="form-control">
                               <option value="" disabled selected>Select Employee</option>
                           </select>
                       </div>
