@@ -73,15 +73,21 @@
                           <textarea formControlName="projectDetails" class="form-control"></textarea>
                       </div>
                       <div class="col-6">
-                          <label for="select-client">Select Client</label>
-                          <select id="select-client" formControlName="clientId" class="form-control">
-                              <option value="" disabled selected>Select client</option>
+                          <label for="">Select Client</label>
+                          <select formControlName="clientId" class="form-control">
+                              <option value="">Select client</option>
+                              @for (item of clientList; track $index) {
+                                <option [value]="item.clientId">{{item.companyName}}</option>
+                              }
                           </select>
                       </div>
                       <div class="col-6">
                           <label for="lead-by">Lead by</label>
                           <select id="lead-by" formControlName="leadByEmpId" class="form-control">
-                              <option value="" disabled selected>Select Employee</option>
+                              <option value="">Select Employee</option>
+                              @for (item of employeeList; track $index) {
+                                <option [value]="item.empId">{{item.empName}} - {{item.empCode}}</option>
+                              }
                           </select>
                       </div>
                       <div class="row pt-2">
@@ -89,7 +95,7 @@
                               <button class="btn btn-secondary">Reset</button>
                           </div>
                           <div class="col-6 text-center">
-                              <button class="btn btn-success">Save Project</button>
+                              <button class="btn btn-success" (click)="onSaveProject()">Save Project</button>
                           </div>
                       </div>
                   </div>
